@@ -48,7 +48,7 @@ LOCAL_MODULE_SUFFIX = .a
 LOCAL_UNINSTALLABLE_MODULE := true
 LOCAL_MULTILIB := 32
 LOCAL_SHARED_LIBRARIES_32 := libdpframework
-LOCAL_SRC_FILES_32 := proprietary/vendor/libstagefright_color_conversion/libstagefright_color_conversion_32.a
+LOCAL_SRC_FILES_32 := proprietary/libstagefright_color_conversion/libstagefright_color_conversion_32.a
 include $(BUILD_PREBUILT)
 
 endif

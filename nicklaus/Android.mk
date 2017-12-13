@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter woods, $(TARGET_DEVICE)),)
+ifneq ($(filter nicklaus, $(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
 LOCAL_MODULE := libaudiocustparam
 LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libaudiocustparam.so

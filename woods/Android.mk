@@ -24,31 +24,37 @@ LOCAL_MULTILIB := 32
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 include $(BUILD_PREBUILT)
-
+ 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libmtkcam_fwkutils
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MULTILIB := 32
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libmtkcam_fwkutils.so
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libdpframework
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE = libmtkcam_fwkutils
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX = .so
-LOCAL_MULTILIB := 32
-LOCAL_SRC_FILES_32 := proprietary/vendor/lib/libdpframework.so
+LOCAL_MULTILIB = 32
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libmtkcam_fwkutils.so
+include $(BUILD_PREBUILT)
+ 
+include $(CLEAR_VARS)
+LOCAL_MODULE = libdpframework
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_MULTILIB = 32
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libdpframework.so
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libstagefright_color_conversion
-LOCAL_MODULE_CLASS := STATIC_LIBRARIES
-LOCAL_MODULE_SUFFIX = .a
-LOCAL_UNINSTALLABLE_MODULE := true
-LOCAL_MULTILIB := 32
-LOCAL_SHARED_LIBRARIES_32 := libdpframework
-LOCAL_SRC_FILES_32 := proprietary/libstagefright_color_conversion/libstagefright_color_conversion_32.a
+LOCAL_MODULE = libion_mtk
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_MULTILIB = 32
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libion_mtk.so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE = libged
+LOCAL_MODULE_CLASS = SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX = .so
+LOCAL_MULTILIB = 32
+LOCAL_SRC_FILES_32 = proprietary/vendor/lib/libged.so
 include $(BUILD_PREBUILT)
 
 endif
